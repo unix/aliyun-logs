@@ -24,6 +24,7 @@
     "@haifeng-fe/tslint-config": "^1.0.0",
     "@types/node-fetch": "^2.3.3",
     "@types/protobufjs": "^6.0.0",
+    "typescript": "^3.4.5",
     "vuepress": "^0.14.11"
   }
 }

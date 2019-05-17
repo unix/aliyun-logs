@@ -13,6 +13,8 @@
   - 屏蔽鉴权细节
   
   - 默认支持 `Promise` / `await`
+  
+  - 缓存 DNS，请求速度更快
 
 ## LICENSE
 [MIT](LICENSE)

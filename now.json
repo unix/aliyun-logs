@@ -1,0 +1,9 @@
+
+{
+  "version": 2,
+  "name": "aliyun-logs",
+  "alias": "aliyun-logs",
+  "builds": [
+    {"src": "package.json", "use": "@now/static-build"}
+  ]
+}

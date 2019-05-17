@@ -39,22 +39,10 @@ const setApiDomain = (input: string | Request, query: object): string | Request 
 const responseParser = (response: Response) => {
   const contentType = response.headers.get('content-type')
   const contentLength = response.headers.get('content-length')
+  if (contentLength === '0') return Promise.resolve({})
   
-  if (contentLength === '0') {
-    return Promise.resolve({})
-  }
-  
-  let key = 'blob'
-  switch (true) {
-    case /\bjson\b/.test(contentType):
-      key = 'json'
-      break
-    case /\btext\b/.test(contentType):
-      key = 'text'
-      break
-    default:
-      break
-  }
+  const key = /\bjson\b/.test(contentType) ? 'json'
+    : /\btext\b/.test(contentType) ? 'text' : 'blob'
   
   const parse = response[key]()
   if (response.status === 403 || response.status === 401) return ui.print.danger('Authentication failure.')
@@ -64,11 +52,8 @@ const responseParser = (response: Response) => {
     })
   }
   
-  if (response.ok) {
-    return parse
-  } else {
-    return parse.then(err => Promise.reject(err))
-  }
+  if (response.ok) return parse
+  return parse.then(err => Promise.reject(err))
 }
 
 export const setFixedHeaders = (headers: HeaderCache) => {

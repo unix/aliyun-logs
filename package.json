@@ -7,6 +7,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint -c tslint.yml -p tsconfig.json",
+    "pre-commit": "yarn lint",
     "now-build": "vuepress build docs && mv docs/.vuepress/dist dist",
     "docs": "vuepress dev docs"
   },

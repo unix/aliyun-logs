@@ -76,7 +76,7 @@ const makeAuthorization = (
 export const updateOptions = (resource: string, options: FetchOptions, params: object) => {
   const customHeader = options.headers as any || {}
   const projectName = customHeader.project ? `${customHeader.project}.` : ''
-  let headers = {
+  const headers = {
     'Host': `${projectName}${cache.endpoint}`,
     'Content-Type': '',
     'Content-Length': '0',

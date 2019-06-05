@@ -33,7 +33,7 @@ export class Indexs {
     projectName: string,
     logstoreName: string,
     indexEntity: IndexsCreateOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'create')
     if (!logstoreName) this.requiredKey('logstoreName', 'create')
     if (!indexEntity) this.requiredKey('entity', 'create')
@@ -54,14 +54,14 @@ export class Indexs {
     projectName: string,
     logstoreName: string,
     indexEntity: IndexsCreateOption,
-  ) {
+  ): Promise<any> {
     return this.create(projectName, logstoreName, indexEntity)
   }
   
   async destroy(
     projectName: string,
     logstoreName: string,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'destroy')
     if (!logstoreName) this.requiredKey('logstoreName', 'destroy')
   
@@ -75,7 +75,7 @@ export class Indexs {
   async findAll(
     projectName: string,
     logstoreName: string,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'destroy')
     if (!logstoreName) this.requiredKey('logstoreName', 'destroy')
   

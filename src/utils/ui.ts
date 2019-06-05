@@ -8,7 +8,7 @@ export const print = {
 
 export const color = {
   red: (text: string) => `\x1b[31m${text}\x1b[31m\x1b[0m`,
-  green: (text: string) => `\x1b[36m${text}\x1b[36m\x1b[0m`
+  green: (text: string) => `\x1b[36m${text}\x1b[36m\x1b[0m`,
 }
 
 export const setDebug = (debug: boolean = false) => {

@@ -1,7 +1,6 @@
 import { join } from 'path'
 import proto from 'protobufjs'
-let builder = proto.loadSync(join(__dirname, 'sls.proto')).lookupType('log.LogGroup')
-
+const builder = proto.loadSync(join(__dirname, 'sls.proto')).lookupType('log.LogGroup')
 
 export const sortHeaders = (headers: object) => {
   return Object.keys(headers)
@@ -44,7 +43,7 @@ export const validateProtoLog = (logGroup: any | any[]) => {
   }))
   
   return Object.assign({}, logGroup, {
-    logs: nextLogs
+    logs: nextLogs,
   })
 }
 

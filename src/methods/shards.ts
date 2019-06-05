@@ -20,7 +20,7 @@ export class Shards {
   async list(
     projectName: string,
     logstoreName: string,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'list')
     if (!logstoreName) this.requiredKey('logstoreName', 'list')
     const options = { headers: { project: projectName } }
@@ -31,7 +31,7 @@ export class Shards {
     projectName: string,
     logstoreName: string,
     splitOption: ShardsSplitOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'split')
     if (!logstoreName) this.requiredKey('logstoreName', 'split')
     if (!splitOption) this.requiredKey('splitOption', 'split')
@@ -46,7 +46,7 @@ export class Shards {
     projectName: string,
     logstoreName: string,
     shardid: number,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'merge')
     if (!logstoreName) this.requiredKey('logstoreName', 'merge')
     if (!shardid) this.requiredKey('shardid', 'merge')
@@ -61,7 +61,7 @@ export class Shards {
     projectName: string,
     logstoreName: string,
     cursorOption: ShardsCursorOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'findCursor')
     if (!logstoreName) this.requiredKey('logstoreName', 'findCursor')
     if (!cursorOption) this.requiredKey('cursorOption', 'findCursor')
@@ -86,7 +86,7 @@ export class Shards {
     projectName: string,
     logstoreName: string,
     timeOfCursorOption: ShardsTimeOfCursorOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'findTimeByCursor')
     if (!logstoreName) this.requiredKey('logstoreName', 'findTimeByCursor')
     if (!timeOfCursorOption) this.requiredKey('timeOfCursorOption', 'findTimeByCursor')

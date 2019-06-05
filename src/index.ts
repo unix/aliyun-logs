@@ -12,21 +12,21 @@ export interface AliyunLogOption {
 
 export class AliyunLog {
   
+  static ProtoEntity: typeof methods.ProtoEntity = methods.ProtoEntity
+  
   projects = new methods.Projects()
   logstores = new methods.Logstores()
   shards = new methods.Shards()
   shippers = new methods.Shippers()
   indexs = new methods.Indexs()
   
-  static ProtoEntity = methods.ProtoEntity
-  
   constructor(
-    private options: AliyunLogOption
+    private options: AliyunLogOption,
   ) {
     this.init()
   }
   
-  init() {
+  init(): void {
     ui.setDebug(this.options.debug)
     fetch.setFixedHeaders({
       accessKey: this.options.accessKey,

@@ -49,7 +49,7 @@ export class Logstores {
     logstoreName: string = '',
     offset: number = 0,
     size: number = 500,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'list')
     const options = { headers: { project: projectName } }
     const params = { offset, size, logstoreName }
@@ -59,7 +59,7 @@ export class Logstores {
   async findOne(
     projectName: string,
     logstoreName: string,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'findOne')
     if (!logstoreName) this.requiredKey('logstoreName', 'findOne')
     const options = { headers: { project: projectName } }
@@ -70,7 +70,7 @@ export class Logstores {
     projectName: string,
     logstoreName: string,
     entity: LogstoreUpdateOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'updateOne')
     if (!logstoreName) this.requiredKey('logstoreName', 'updateOne')
     if (!entity) this.requiredKey('entity', 'updateOne')
@@ -87,7 +87,7 @@ export class Logstores {
     projectName: string,
     logstoreName: string,
     entity: LogstoreUpdateOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'create')
     if (!logstoreName) this.requiredKey('logstoreName', 'create')
     if (!entity) this.requiredKey('entity', 'create')
@@ -103,7 +103,7 @@ export class Logstores {
   async destroyOne(
     projectName: string,
     logstoreName: string,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'destroyOne')
     if (!logstoreName) this.requiredKey('logstoreName', 'destroyOne')
     const options = {
@@ -117,7 +117,7 @@ export class Logstores {
     projectName: string,
     logstoreName: string,
     logEntity: LogGroup,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'appendLog')
     if (!logstoreName) this.requiredKey('logstoreName', 'appendLog')
     if (!logEntity) this.requiredKey('logEntity', 'appendLog')
@@ -135,7 +135,7 @@ export class Logstores {
     projectName: string,
     logstoreName: string,
     pullOption: LogsPullOption,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'pullLogsByCursor')
     if (!logstoreName) this.requiredKey('logstoreName', 'pullLogsByCursor')
     if (!pullOption) this.requiredKey('pullOption', 'pullLogsByCursor')
@@ -146,7 +146,7 @@ export class Logstores {
         project: projectName,
         Accept: 'application/x-protobuf',
         'Accept-Encoding': pullOption.encoding || 'lz4',
-      }
+      },
     }
     const params = {
       type: 'logs',
@@ -160,7 +160,7 @@ export class Logstores {
     projectName: string,
     logstoreName: string,
     query: LogQuery,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'queryLogs')
     if (!logstoreName) this.requiredKey('logstoreName', 'queryLogs')
     if (!query) this.requiredKey('query', 'queryLogs')
@@ -178,7 +178,7 @@ export class Logstores {
     projectName: string,
     logstoreName: string,
     query: HistogramsQuery,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'queryHistograms')
     if (!logstoreName) this.requiredKey('logstoreName', 'queryHistograms')
     if (!query) this.requiredKey('query', 'queryHistograms')

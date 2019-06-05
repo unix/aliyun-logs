@@ -21,7 +21,7 @@ export class Shippers {
     projectName: string,
     logstoreName: string = '',
     taskQuery: TaskQuery,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'findTasks')
     if (!logstoreName) this.requiredKey('logstoreName', 'findTasks')
     if (!taskQuery) this.requiredKey('taskQuery', 'findTasks')
@@ -44,7 +44,7 @@ export class Shippers {
     projectName: string,
     logstoreName: string = '',
     retryQuery: RetryTaskQuery,
-  ) {
+  ): Promise<any> {
     if (!projectName) this.requiredKey('projectName', 'retryTasks')
     if (!logstoreName) this.requiredKey('logstoreName', 'retryTasks')
     if (!retryQuery) this.requiredKey('retryQuery', 'retryTasks')

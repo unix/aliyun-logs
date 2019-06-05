@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "lint": "tslint -c tslint.yml -p tsconfig.json",
-    "pre-commit": "yarn lint",
+    "test": "tslint -c tslint.yml -p tsconfig.json",
     "now-build": "vuepress build docs && mv docs/.vuepress/dist dist",
     "docs": "vuepress dev docs"
   },

@@ -1,8 +1,8 @@
 {
   "name": "aliyun-logs",
   "version": "0.2.1",
-  "repository": "git@github.com:WittBulter/aliyun-logs.git",
-  "author": "WittBulter <nanazuimeng123@gmail.com>",
+  "repository": "git@github.com:unix/aliyun-logs.git",
+  "author": "unix <lambdas.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "tsc",

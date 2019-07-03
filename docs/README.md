@@ -26,16 +26,16 @@
 
 #### 贡献
 
-  你可以 Fork [github 项目](https://github.com/WittBulter/aliyun-logs) 并在你自己的远程源上工作，最后以 Pull Request 合并至主仓库。
+  你可以 Fork [github 项目](https://github.com/unix/aliyun-logs) 并在你自己的远程源上工作，最后以 Pull Request 合并至主仓库。
   如果你想要创建一个 Fix 相关的 PR，请先创建一个相关 Issue 说明具体的问题。
  
 #### 帮助与反馈
 
-  如果有问题可以提交至项目的 [Issues](https://github.com/WittBulter/aliyun-logs)，但 **API 相关的疑问请不要提交到这里**。
+  如果有问题可以提交至项目的 [Issues](https://github.com/unix/aliyun-logs)，但 **API 相关的疑问请不要提交到这里**。
    
 #### LICENSE
 
-  [MIT License](https://github.com/WittBulter/aliyun-logs/blob/master/LICENSE)
+  [MIT License](https://github.com/unix/aliyun-logs/blob/master/LICENSE)
 
 
 

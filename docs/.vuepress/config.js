@@ -10,7 +10,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '接口文档', link: '/' },
-      { text: 'Github', link: 'https://github.com/wittbulter/aliyun-logs' },
+      { text: 'Github', link: 'https://github.com/unix/aliyun-logs' },
     ],
     sidebar: {
       '/': [{

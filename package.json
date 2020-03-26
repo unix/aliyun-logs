@@ -5,7 +5,7 @@
   "author": "unix <lambdas.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp src/utils/sls.proto dist/utils",
     "test": "tslint -c tslint.yml -p tsconfig.json",
     "now-build": "vuepress build docs && mv docs/.vuepress/dist dist",
     "docs": "vuepress dev docs"

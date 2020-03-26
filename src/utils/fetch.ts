@@ -7,10 +7,10 @@ import * as ui from './ui'
 
 const fetch = zeitFetch(nodeFetch)
 export interface HeaderCache {
-  accessKey: string,
-  secret: string,
-  endpoint: string,
-  stsToken?: string,
+  accessKey: string
+  secret: string
+  endpoint: string
+  stsToken?: string
 }
 let cache: HeaderCache = {
   accessKey: undefined,

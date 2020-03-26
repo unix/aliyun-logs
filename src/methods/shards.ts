@@ -2,18 +2,18 @@ import * as utils from '../utils/fetch'
 import * as ui from '../utils/ui'
 
 export interface ShardsSplitOption {
-  shardid: number,
-  splitkey: string,
+  shardid: number
+  splitkey: string
 }
 
 export interface ShardsCursorOption {
-  shardid: string,
-  from: 'begin' | 'end' | string,
+  shardid: string
+  from: 'begin' | 'end' | string
 }
 
 export interface ShardsTimeOfCursorOption {
-  shardid: string,
-  cursor: string,
+  shardid: string
+  cursor: string
 }
 
 export class Shards {

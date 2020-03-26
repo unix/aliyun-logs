@@ -1,13 +1,14 @@
 import * as ui from '../utils/ui'
 import * as utils from '../utils/fetch'
 
+/* eslint-disable @typescript-eslint/camelcase */
 export interface FieldIndexValue {
-  type: string,
-  alias?: string,
-  chn?: boolean,
-  token?: string[],
-  caseSensitive?: boolean,
-  doc_value?: boolean,
+  type: string
+  alias?: string
+  chn?: boolean
+  token?: string[]
+  caseSensitive?: boolean
+  doc_value?: boolean
 }
 
 export interface FieldIndex {
@@ -15,17 +16,18 @@ export interface FieldIndex {
 }
 
 export interface LineIndex {
-  token: string[],
-  caseSensitive?: boolean,
-  chn?: boolean,
-  include_keys?: string[],
-  exclude_keys?: string[],
+  token: string[]
+  caseSensitive?: boolean
+  chn?: boolean
+  include_keys?: string[]
+  exclude_keys?: string[]
 }
 
 export interface IndexsCreateOption {
-  keys: FieldIndex,
-  line: LineIndex,
+  keys: FieldIndex
+  line: LineIndex
 }
+/* eslint-enable */
 
 export class Indexs {
   

@@ -3,43 +3,45 @@ import * as ui from '../utils/ui'
 import * as helper from '../utils/helper'
 import { ProtoEntity } from './proto'
 
+/* eslint-disable @typescript-eslint/camelcase */
 export interface LogstoreUpdateOption {
-  ttl: number,
-  shardCount: number,
-  enable_tracking?: boolean,
-  autoSplit?: boolean,
-  maxSplitShard?: number,
+  ttl: number
+  shardCount: number
+  enable_tracking?: boolean
+  autoSplit?: boolean
+  maxSplitShard?: number
 }
+/* eslint-enable */
 
 export interface LogGroup {
-  logs: ProtoEntity | ProtoEntity[],
-  topic?: string,
-  source?: string,
-  reserved?: string,
+  logs: ProtoEntity | ProtoEntity[]
+  topic?: string
+  source?: string
+  reserved?: string
 }
 
 export interface LogsPullOption {
-  shardid: string,
-  cursor: string,
-  count: number,
+  shardid: string
+  cursor: string
+  count: number
   encoding?: 'lz4' | 'deflate' | 'gzip'
 }
 
 export interface LogQuery {
-  from: number,
-  to: number,
-  topic?: string,
-  query?: string,
-  line?: number,
-  offset?: number,
-  reverse?: boolean,
+  from: number
+  to: number
+  topic?: string
+  query?: string
+  line?: number
+  offset?: number
+  reverse?: boolean
 }
 
 export interface HistogramsQuery {
-  from: number,
-  to: number,
-  topic?: string,
-  query?: string,
+  from: number
+  to: number
+  topic?: string
+  query?: string
 }
 
 export class Logstores {

@@ -6,9 +6,25 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && cp src/utils/sls.proto dist/utils",
-    "test": "tslint -c tslint.yml -p tsconfig.json",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
     "now-build": "vuepress build docs && mv docs/.vuepress/dist dist",
-    "docs": "vuepress dev docs"
+    "docs": "vuepress dev docs",
+    "release": "yarn build && yarn publish --access public --non-interactive"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "eslint-config-ts-lambdas"
+    ],
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,8 +40,11 @@
   "devDependencies": {
     "@types/node-fetch": "^2.3.3",
     "@types/protobufjs": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-ts-lambdas": "^1.2.0",
     "pre-commit": "^1.2.2",
-    "tslint-config-lambdas": "^1.1.0",
     "typescript": "^3.4.5",
     "vuepress": "^0.14.11"
   }

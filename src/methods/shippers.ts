@@ -2,17 +2,17 @@ import * as ui from '../utils/ui'
 import * as utils from '../utils/fetch'
 
 export interface TaskQuery {
-  shipperName: string,
-  from: number,
-  to: number,
-  status?: string,
-  offset?: number,
-  size?: number,
+  shipperName: string
+  from: number
+  to: number
+  status?: string
+  offset?: number
+  size?: number
 }
 
 export interface RetryTaskQuery {
-  shipperName: string,
-  taskids: string[],
+  shipperName: string
+  taskids: string[]
 }
 
 export class Shippers {

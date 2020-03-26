@@ -3,11 +3,11 @@ import * as fetch from './utils/fetch'
 import * as ui from './utils/ui'
 
 export interface AliyunLogOption {
-  accessKey: string,
-  secret: string,
-  endpoint: string,
-  stsToken?: string,
-  debug?: boolean,
+  accessKey: string
+  secret: string
+  endpoint: string
+  stsToken?: string
+  debug?: boolean
 }
 
 export class AliyunLog {

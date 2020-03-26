@@ -1,6 +1,6 @@
 {
   "name": "aliyun-logs",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "repository": "git@github.com:unix/aliyun-logs.git",
   "author": "unix <lambdas.dev@gmail.com>",
   "license": "MIT",

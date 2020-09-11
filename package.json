@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "@zeit/fetch": "^5.1.0",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^2.6.1",
     "protobufjs": "^6.8.8"
   },
   "devDependencies": {
